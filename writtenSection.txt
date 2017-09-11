@@ -13,7 +13,7 @@ Classes can be re-used.
 An element can have multiple classes.
 
 4. What does the z-index do?
-Determines which box is on top, eg, if two elements both cover the same part of a page, the one with the higher z-index will display in the contested area.
+Determines which box is on top, eg, if two elements both cover the same part of a page, the one with the higher z-index will display in the overlapping area.
 
 5. Summarize what the keyword 'this' is used for?
 'this' is a reference to the object that invoked the function that is being run.
@@ -32,7 +32,7 @@ objectName.prototype.functionName=function(){...}
 9. What is MVC?
 Model-View-Controller. It's a programming paradigm that suggests a method to modularize code:
 The model is view-independent, it stores and manipulates data. With Angular, this would be the service.
-The controller works between the model and the view. It gets the data from the service and sends it to the view.
+The controller works between the model and the view. It gets the data from the model and sends it to the view, and takes data from the view and can send it to the model to be processed.
 The view is the way that the data is output.
 
 10. What is the component lifecycle?
@@ -49,7 +49,7 @@ componentWillUnmount
 
 11. What is REST?
 It stands for Representational State Transfer
-It is stateless, meaning that the server doesn't maintain internal storage based on the user.
+It is stateless, meaning that the server doesn't maintain internal storage based on the user
 
 12. Name three ways of getting data from the URL using express
 A body:
