@@ -1,28 +1,63 @@
 Answer each question in a written format
 
 1. What does semantic HTML mean?
+Using HTML elements/class names that are descriptive of what those elements are doing. 
 
 2. What is the box model?
+Each HTML element can be seen as a box, and the box model views each element as a box that has properties of: Margins, borders, padding, and the actual content.
 
 3. What is the difference between IDs and Classes?
+An element can only have one ID.
+IDs are intended to be unique to a particular element.
+Classes can be re-used.
+An element can have multiple classes.
 
 4. What does the z-index do?
+Determines which box is on top, eg, if two elements both cover the same part of a page, the one with the higher z-index will display in the contested area.
 
 5. Summarize what the keyword 'this' is used for?
+'this' is a reference to the object that invoked the function that is being run.
 
 6. What is a callback?
+A function that is passed in as an argument in a function call.
 
 7. What is a closure?
+A closure is where a function or object is returned from a function, which allows access to the function variables, even after the function has been invoked.
 
 8. How does prototype work?
+A prototype is a variable that is defined for all objects of a type. This variable can be a reference to a function, eg, the prototype functions available for all arrays.
+A prototype can be declared by the command:
+objectName.prototype.functionName=function(){...}
 
 9. What is MVC?
+Model-View-Controller. It's a programming paradigm that suggests a method to modularize code:
+The model is view-independent, it stores and manipulates data. With Angular, this would be the service.
+The controller works between the model and the view. It gets the data from the service and sends it to the view.
+The view is the way that the data is output.
 
 10. What is the component lifecycle?
+In React, component lifecycle refers to the functions that are called when a component is put on or removed from the DOM.
+When a component is put on the dom, the functions that are called, in order, are:
+GetDefaultProps
+GetInitialState
+ComponentWillMount
+Render
+ComponentDidMount
+
+And when removing it:
+componentWillUnmount
 
 11. What is REST?
+It stands for Representational State Transfer
+It is stateless, meaning that the server doesn't maintain internal storage based on the user.
 
 12. Name three ways of getting data from the URL using express
+A body:
+	Found at req.body, the key-value pairs are sent in a JSON object.
+Parameters:
+	Found at req.params. The parameter names are declared on the api endpoint statement, eg:
+	app.get('/api/getDetails/:personId,...); and the values are passed in as part of the URL.
+Queries Found at req.query. Declared in the URL in the format '/api/endpoint?key1=value1&key2=value2'
 
 create table users (
 id serial,
@@ -33,9 +68,13 @@ email varchar(255)
 12. Given the Schema above, write the following four basic CRUD db queries using postgres syntax
 
 -Get all users:
+select * from users
 
 -Create a new user with the name of 'your name' and an email of 'fake@fake.com':
+insert into users(name, email) values ('your name','fake@fake.com')
 
 -Update the newly created user's name to 'Bobby Boy':
+update users set name='Bobby Boy' where name='Bobby Boy' and email='fake@fake.com'
 
 -Delete the newly updated user:
+delete users where name='Bobby Boy' and email='fake@fake.com'
