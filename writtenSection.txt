@@ -74,7 +74,7 @@ select * from users
 insert into users(name, email) values ('your name','fake@fake.com')
 
 -Update the newly created user's name to 'Bobby Boy':
-update users set name='Bobby Boy' where name='Bobby Boy' and email='fake@fake.com'
+update users set name='Bobby Boy' where name='your name' and email='fake@fake.com'
 
 -Delete the newly updated user:
 delete users where name='Bobby Boy' and email='fake@fake.com'
